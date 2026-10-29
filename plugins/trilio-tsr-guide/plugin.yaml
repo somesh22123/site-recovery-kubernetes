@@ -1,0 +1,29 @@
+# Portable plugin source. `pluginkit generate` turns this into the manifest
+# files Claude Code, Codex, Cursor and Junie each expect.
+name: trilio-tsr-guide
+displayName: Trilio Site Recovery Guide
+version: 0.1.0
+description: Helps AI coding agents check DR readiness and plan failovers with Trilio Site Recovery (TSR) safely.
+author:
+  name: Trilio TSR Team
+  email: tsr-team@trilio.io
+homepage: https://github.com/somesh22123/tsr-k8s-skill
+repository: https://github.com/somesh22123/tsr-k8s-skill
+license: Apache-2.0
+keywords: [trilio, tsr, disaster-recovery, kubernetes, openshift]
+category: Developer Tools
+
+# Agent tools to generate files for: claude-code, codex, cursor, junie.
+# Launch set is Claude Code + Codex (+ Cursor); Junie is Phase 3.
+targets: [claude-code, codex, cursor]
+
+mcpServers:
+  trilio-tsr:
+    # TODO(tsr-team): point at the published TSR MCP server (Phase 3: container image).
+    command: trilio-tsr-mcp
+    args: ["--read-only"]
+
+codex:
+  defaultPrompt:
+    - Check TSR DR readiness in this cluster
+    - Plan a failover for my protected apps

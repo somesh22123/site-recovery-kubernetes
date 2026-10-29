@@ -1,0 +1,11 @@
+{
+  "generator": "trilio-agent-plugin-kit 1.0.0",
+  "note": "Generated from plugin.yaml. Do not edit these files by hand; run pluginkit generate.",
+  "files": {
+    ".claude-plugin/plugin.json": "928fb4fda29f307e91290cd748bb350c7268ebc6930784c5c5b3bcfc9091e262",
+    ".codex-plugin/plugin.json": "b0d23fa3317095c7f029edeb4980f7987d8b241b64f7b80396d2d1afc08b5a78",
+    ".cursor-plugin/plugin.json": "90734b003d5f534cb76dd13da8ee4a2ae517684ce951dd933180675a76cd2498",
+    ".mcp.json": "fc46408be929377cecffb90fd44e96efa5bac7479dc0e34e6b4719d723c81d13",
+    "mcp.json": "fc46408be929377cecffb90fd44e96efa5bac7479dc0e34e6b4719d723c81d13"
+  }
+}
