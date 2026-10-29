@@ -1,4 +1,4 @@
-# tsr-k8s-skill
+# site-recovery-kubernetes
 
 Agent plugins for Trilio Site Recovery (TSR), owned by the TSR team.
 Part of **Option A (three-repo model)** in the *Agent Plugins: Repository Structure Proposal*. Built with
@@ -8,11 +8,11 @@ Part of **Option A (three-repo model)** in the *Agent Plugins: Repository Struct
 
 | Path | What it is |
 | --- | --- |
-| `plugins/trilio-tsr-guide/plugin.yaml` | Portable source: manifest and MCP config. **Edit this.** |
-| `plugins/trilio-tsr-guide/skills/` | Skills, shared by every agent tool |
-| `plugins/trilio-tsr-guide/.claude-plugin/`, `.codex-plugin/`, `.cursor-plugin/`, `.mcp.json`, `mcp.json` | Generated. CI fails if edited by hand |
-| `plugins/trilio-tsr-guide/agents/` | `tsr-recovery-planner` helper agent |
-| `plugins/trilio-tsr-guide/hooks/` | Safety hook: asks before mutating Trilio resources (Claude Code) |
+| `plugins/site-recovery-kubernetes/plugin.yaml` | Portable source: manifest and MCP config. **Edit this.** |
+| `plugins/site-recovery-kubernetes/skills/` | Skills, shared by every agent tool |
+| `plugins/site-recovery-kubernetes/.claude-plugin/`, `.codex-plugin/`, `.cursor-plugin/`, `.mcp.json`, `mcp.json` | Generated. CI fails if edited by hand |
+| `plugins/site-recovery-kubernetes/agents/` | `tsr-recovery-planner` helper agent |
+| `plugins/site-recovery-kubernetes/hooks/` | Safety hook: asks before mutating Trilio resources (Claude Code) |
 | `mcp-server/` | The TSR MCP server |
 | `evals/` | Eval cases |
 | `tests/` | Unit tests, run by CI |
@@ -25,7 +25,7 @@ python .pluginkit/pluginkit.py validate .
 python .pluginkit/pluginkit.py generate .        # after editing plugin.yaml or skills
 ```
 
-Release by bumping `version` in `plugin.yaml` and tagging `trilio-tsr-guide/v<version>`.
+Release by bumping `version` in `plugin.yaml` and tagging `site-recovery-kubernetes/v<version>`.
 The release workflow builds the zip and GitHub release; then the platform group
 pins the tag in [trilio-agent-marketplace](https://github.com/somesh22123/trilio-agent-marketplace).
 
@@ -35,5 +35,5 @@ Customers don't add this repo directly; they add the catalog once:
 
 ```sh
 claude plugin marketplace add somesh22123/trilio-agent-marketplace
-claude plugin install trilio-tsr-guide@trilio
+claude plugin install site-recovery-kubernetes@trilio
 ```

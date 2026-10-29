@@ -1,14 +1,14 @@
 # Portable plugin source. `pluginkit generate` turns this into the manifest
 # files Claude Code, Codex, Cursor and Junie each expect.
-name: trilio-tsr-guide
-displayName: Trilio Site Recovery Guide
+name: site-recovery-kubernetes
+displayName: Trilio Site Recovery for Kubernetes
 version: 0.1.0
 description: Helps AI coding agents check DR readiness and plan failovers with Trilio Site Recovery (TSR) safely.
 author:
   name: Trilio TSR Team
   email: tsr-team@trilio.io
-homepage: https://github.com/somesh22123/tsr-k8s-skill
-repository: https://github.com/somesh22123/tsr-k8s-skill
+homepage: https://github.com/somesh22123/site-recovery-kubernetes
+repository: https://github.com/somesh22123/site-recovery-kubernetes
 license: Apache-2.0
 keywords: [trilio, tsr, disaster-recovery, kubernetes, openshift]
 category: Developer Tools

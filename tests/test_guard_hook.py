@@ -2,7 +2,7 @@ import importlib.util
 import unittest
 from pathlib import Path
 
-HOOK_PATH = Path(__file__).resolve().parent.parent / "plugins/trilio-tsr-guide/hooks/guard_trilio_changes.py"
+HOOK_PATH = Path(__file__).resolve().parent.parent / "plugins/site-recovery-kubernetes/hooks/guard_trilio_changes.py"
 spec = importlib.util.spec_from_file_location("guard", HOOK_PATH)
 guard = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(guard)
